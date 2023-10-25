@@ -6,8 +6,8 @@ import { UserContext } from "../../context/user/user";
 
 const fetchMatches = async (setMatchesCB: (data: Matches) => void) => {
   const data: Matches = await getMatches();
-  const sorted = data.matches.sort((a, b) => {
-    return b.isRunning ? 1 : -1;
+  const sorted = data.matches.sort((b) => {
+    return b.isRunning ? -1 : 1;
   });
   setMatchesCB({ matches: sorted });
 };
