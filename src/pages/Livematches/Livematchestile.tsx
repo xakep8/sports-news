@@ -80,25 +80,29 @@ function LiveGamesTile(props: {
   return (
     <div
       className="flex flex-col p-4 rounded-md shadow-sm shadow-gray-400 dark:shadow-gray-900 m-2 
-      flex-grow-0 flex-shrink-0 w-64
+      flex-grow-0 flex-shrink-0 w-80
       bg-white dark:bg-slate-700 dark:text-slate-300"
     >
       <div className="font-bold text-lg mb-1 flex justify-between w-full items-start">
-        <span>
+        <span className="flex flex-col items-start">
           <div className="flex gap-4 text-green-500 font-normal items-center text-base">
-            {fav && (
-              <span className="flex gap-1 items-center">
-                <StarIcon className="w-5 h-5 text-green-500" />
-                {"Favorite"}
-              </span>
-            )}
-            {isRunning && (
-              <span className="flex gap-1 items-center">
-                {<PlayCircleIcon className="w-5 h-5" />}Live
-              </span>
-            )}
+            <div className="flex gap-1">
+              {fav && (
+                <span className="flex gap-1 items-center">
+                  <StarIcon className="w-5 h-5 text-green-500" />
+                  {"Favorite"}
+                </span>
+              )}
+              {isRunning && (
+                <span className="flex gap-1 items-center">
+                  {<PlayCircleIcon className="w-5 h-5" />}Live
+                </span>
+              )}
+            </div>
           </div>
-          {match.sportName}
+          <div>
+            {match.sportName}
+          </div>
         </span>
         <div className="flex gap-1">
           {user != null && (

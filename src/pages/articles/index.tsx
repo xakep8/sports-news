@@ -117,7 +117,7 @@ function ArticleList() {
           className="flex overflow-x-hidden mb-px text-sm font-medium text-center"
           id="myTab"
         >
-          {user != null && (
+          {(user != null)?(
             <li key={0} className="mr-2">
               <button
                 className={`${
@@ -135,7 +135,7 @@ function ArticleList() {
                 Favorites
               </button>
             </li>
-          )}
+          ):(<li></li>)}
           <li key={"x"} className="mr-2">
             <button
               className={`${

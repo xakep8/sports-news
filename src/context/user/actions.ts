@@ -1,5 +1,5 @@
 import { API_ENDPOINT } from "../../config/constants";
-import { SetPreferences } from "../../types/user";
+import { SetPreferences, User } from "../../types/user";
 import { UserLogin } from "../../types/user";
 import { UserSignup } from "../../types/user";
 import { UserUpdate } from "../../types/user";
@@ -7,6 +7,7 @@ import { UserUpdate } from "../../types/user";
 type requestType = "GET" | "POST" | "PATCH";
 
 type payloadType =
+  | User
   | UserLogin
   | UserSignup
   | UserUpdate
