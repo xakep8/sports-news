@@ -53,7 +53,7 @@ function LiveGames() {
 
   return (
     <div className="w-full flex flex-col items-center px-4">
-      <h1 className="text-4xl text-green-600 font-semibold text-left w-full ml-6 my-3 font-serif">
+      <h1 className="text-4xl text-green-600 font-semibold text-left w-full ml-6 font-serif">
         Trending Games
       </h1>
       <div className="flex w-full gap-2 overflow-x-scroll scbar dark:scbard">

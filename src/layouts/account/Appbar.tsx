@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 import React from 'react';
 import { UserCircleIcon } from '@heroicons/react/24/outline'
-// import Logo from "../../assets/images/logo.png"
+import Logo from "../../assets/logo-removebg-preview.png"
 import { Link, useLocation } from "react-router-dom"
 import { Disclosure, Menu, Transition, Switch } from '@headlessui/react';
 import { useState,useContext } from 'react';
@@ -47,15 +47,15 @@ const Appbar = () => {
     <>
       <Disclosure as="nav" className="border-b border-slate-200">
         {({ }) => (
-          <div className="mx-auto w-screen px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto w-screen px-6 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
                 <div className="flex-shrink-0">
-                    {/* <img
-                    className="h-8"
+                    <img
+                    className="h-20 w-86"
                     src={Logo}
                     alt="Smarter Tasks"
-                  /> */}
+                  />
                 </div>
               </div>
               <div className="hidden md:block">
@@ -149,8 +149,8 @@ const Appbar = () => {
                   }
                 </div>
               </div>
-              <PreferencesDialog open={isOpen} setOpen={setIsOpen}/>
             </div>
+            <PreferencesDialog open={isOpen} setOpen={setIsOpen}/>
           </div>
         )}
       </Disclosure>

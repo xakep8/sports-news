@@ -83,7 +83,7 @@ function LiveGamesTile(props: {
       flex-grow-0 flex-shrink-0 w-80
       bg-white dark:bg-slate-700 dark:text-slate-300"
     >
-      <div className="font-bold text-lg mb-1 flex justify-between w-full items-start">
+      <div className="font-bold text-lg mb-1 flex justify-between w-full">
         <span className="flex flex-col items-start">
           <div className="flex gap-4 text-green-500 font-normal items-center text-base">
             <div className="flex gap-1">
@@ -99,9 +99,6 @@ function LiveGamesTile(props: {
                 </span>
               )}
             </div>
-          </div>
-          <div>
-            {match.sportName}
           </div>
         </span>
         <div className="flex gap-1">
@@ -121,6 +118,9 @@ function LiveGamesTile(props: {
             />
           </button>
         </div>
+      </div>
+      <div className="flex w-full justify-center text-xl font-extrabold">
+        {match.sportName}
       </div>
       <p className="my-1">{match.location}</p>
       {Object.keys(match.score).map((key) => (
