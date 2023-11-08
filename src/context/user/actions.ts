@@ -1,10 +1,15 @@
 import { API_ENDPOINT } from "../../config/constants";
-
 import { SetPreferences } from "../../types/user";
+import { UserLogin } from "../../types/user";
+import { UserSignup } from "../../types/user";
+import { UserUpdate } from "../../types/user";
 
 type requestType = "GET" | "POST" | "PATCH";
 
 type payloadType =
+  | UserLogin
+  | UserSignup
+  | UserUpdate
   | SetPreferences
   | object;
 
@@ -30,7 +35,7 @@ export const request = async (
   }
 
   const token = localStorage.getItem("authToken");
-  const auth = token ? "Token " + token : "Token ";
+  const auth = token ? token : "Token ";
   const response = await fetch(url, {
     method,
     headers: {

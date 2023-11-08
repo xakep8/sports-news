@@ -1,5 +1,5 @@
 import { API_ENDPOINT } from "../../config/constants";
-import { SetPreferences } from "../../types/user";
+import {SetPreferences} from "../../types/user";
 import { UserLogin } from "../../types/user";
 import { UserSignup } from "../../types/user";
 import { UserUpdate } from "../../types/user";
@@ -57,10 +57,19 @@ export const request = async (
   }
 };
 
-export const getArticles = async () => {
-  return await request("/articles", "GET");
-};
 
-export const getArticle = async (id: number) => {
-  return await request(`/articles/${id}`, "GET");
-};
+export const getSports = async () => {
+    return await request("/sports", "GET");
+  };
+  
+  export const getSport = async (id: number) => {
+    return await request(`/sports/${id}`, "GET");
+  };
+  
+  export const getTeams = async () => {
+    return await request("/teams", "GET");
+  };
+  
+  export const getTeam = async (id: number) => {
+    return await request(`/teams/${id}`, "GET");
+  };

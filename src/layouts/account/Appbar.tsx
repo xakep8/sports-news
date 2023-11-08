@@ -6,9 +6,9 @@ import { Link, useLocation } from "react-router-dom"
 import { Disclosure, Menu, Transition, Switch } from '@headlessui/react';
 import { useState,useContext } from 'react';
 import { ThemeContext } from '../../context/theme';
+import PreferencesDialog from '../../components/preferencesDialog';
 
 const userNavigation = [
-  {name:'Profile', href:'#'},
   {name:'Reset Password',href:'/reset'},
   {name:'Logout',href:'/logout'},
 ]
@@ -19,6 +19,7 @@ const Appbar = () => {
   const { theme, setTheme } = useContext(ThemeContext);
   const [enabled, setEnabled] = useState(true);
   const [isAuth,setAuth] = useState(false);
+  const [isOpen,setIsOpen]=useState(false);
 
   const toggleTheme = () => {
     let newTheme = ''
@@ -46,7 +47,7 @@ const Appbar = () => {
     <>
       <Disclosure as="nav" className="border-b border-slate-200">
         {({ }) => (
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto w-screen px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
                 <div className="flex-shrink-0">
@@ -114,18 +115,29 @@ const Appbar = () => {
                       leaveTo="transform opacity-0 scale-95"
                     >
                       <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <Menu.Item key={'preferences'}>
+                          {({active})=>(
+                            <button onClick={()=>setIsOpen(true)} className={classNames(active ? 'bg-gray-100' : '','block px-4 py-2 text-sm text-gray-700 w-full bg-white')}>
+                              Preferences
+                            </button>
+                          )}
+                        </Menu.Item>
                         {userNavigation.map((item) => (
                           <Menu.Item key={item.name}>
                             {({ active }) => (
-                              <a
-                                href={item.href}
-                                className={classNames(
-                                  active ? 'bg-gray-100' : '',
-                                  'block px-4 py-2 text-sm text-gray-700'
-                                )}
-                              >
-                                {item.name}
-                              </a>
+                              <button className={classNames(
+                                active ? 'bg-gray-100' : '',
+                                'block px-4 py-2 text-sm text-gray-700 w-full bg-white'
+                              )}>
+                                <a
+                                  href={item.href}
+                                  className={
+                                    'block text-sm text-gray-700 hover:text-gray-700'
+                                  }
+                                >
+                                  {item.name}
+                                </a>
+                              </button>
                             )}
                           </Menu.Item>
                         ))}
@@ -137,6 +149,7 @@ const Appbar = () => {
                   }
                 </div>
               </div>
+              <PreferencesDialog open={isOpen} setOpen={setIsOpen}/>
             </div>
           </div>
         )}

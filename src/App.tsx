@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <div className={`h-screen w-full mx-auto ${theme === "dark"?"dark":""}`}>
+      <div className={`h-full w-full mx-auto overflow-y-hidden ${theme === "dark"?"dark":""}`}>
         <RouterProvider router={router}/>
       </div>
     </>

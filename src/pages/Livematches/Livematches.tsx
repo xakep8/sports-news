@@ -79,7 +79,7 @@ function LiveGames() {
         ) : (
           <>
             {matches.matches.map((match) => (
-              <LiveGamesTile
+              <LiveGamesTile  
                 key={match.id}
                 fav={false}
                 isRunning={match.isRunning}
