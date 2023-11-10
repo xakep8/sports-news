@@ -8,7 +8,6 @@ import { BookmarkIcon } from "@heroicons/react/24/outline";
 import { UserContext } from "../../context/user/user";
 import { BookmarkSlashIcon } from "@heroicons/react/20/solid";
 import { Preferences } from "../../types/user";
-import { ThemeContext } from "../../context/theme";
 
 const getCurrentMatch =
   (id: number) => async (setMatchCB: (data: Match) => void) => {
