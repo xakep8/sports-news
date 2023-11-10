@@ -1,27 +1,49 @@
-# React + TypeScript + Vite
+# Sports News Application
+This application is built using `React JS`. I can be used to view news articles and live matches going on. This application also has a preference feature to filter the articles and matches according to the favourite sport and favourite teams. You can also use the provided filter for the articles by sport's names. You can also change your password by going to the reset password in the user menu.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Running the Application
+You can run the application using the following steps on your local machine
 
-Currently, two official plugins are available:
+`git clone https://github.com/xakep8/sports-news.git`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+`npm install`
 
-## Expanding the ESLint configuration
+`npm run dev`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+or you can use the application's live instance made public by going to
 
-- Configure the top-level `parserOptions` property like this:
+https://eclectic-selkie-0c49b7.netlify.app/
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+# Screenshots
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+You can view a demo of the application at 
+
+https://drive.google.com/file/d/1feig5UijOrt_zb0-yKIQt3ytgoMYghrl/view?usp=sharing
+
+### Sign In
+![Sign In](https://github.com/xakep8/sports-news/blob/main/screenshots/Screenshot%20from%202023-11-10%2015-58-44.png?raw=true)
+
+### Sign Up
+![Sign Up](https://github.com/xakep8/sports-news/blob/main/screenshots/Screenshot%20from%202023-11-10%2015-58-56.png?raw=true)
+
+### Home Page
+![Home Page](https://github.com/xakep8/sports-news/blob/main/screenshots/Screenshot%20from%202023-11-10%2015-59-11.png?raw=true)
+
+### View Article
+![View Article](https://github.com/xakep8/sports-news/blob/main/screenshots/Screenshot%20from%202023-11-10%2015-59-23.png?raw=true)
+
+### Preferences
+![preferences 1](https://github.com/xakep8/sports-news/blob/main/screenshots/Screenshot%20from%202023-11-10%2015-59-34.png?raw=true)
+
+![preferences 2](https://github.com/xakep8/sports-news/blob/main/screenshots/Screenshot%20from%202023-11-10%2015-59-41.png?raw=true)
+
+![preferences 3](https://github.com/xakep8/sports-news/blob/main/screenshots/Screenshot%20from%202023-11-10%2015-59-48.png?raw=true)
+
+### Save Articles and Games
+![Save Article and games](https://github.com/xakep8/sports-news/blob/main/screenshots/Screenshot%20from%202023-11-10%2015-59-54.png?raw=true)
+
+### Saved Section
+![Saved Section](https://github.com/xakep8/sports-news/blob/main/screenshots/Screenshot%20from%202023-11-10%2015-59-58.png?raw=true)
+
+### Reset Password
+![Reset Password](https://github.com/xakep8/sports-news/blob/main/screenshots/Screenshot%20from%202023-11-10%2016-00-10.png?raw=true)
