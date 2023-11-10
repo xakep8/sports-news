@@ -26,7 +26,6 @@ function LiveGamesTile(props: {
   fav: boolean;
   isRunning: boolean;
 }) {
-  const {theme} =useContext(ThemeContext);
   const { user, setUser } = useContext(UserContext);
   const { id, fav, isRunning } = props;
   const [match, setMatch] = useState<Match>();
