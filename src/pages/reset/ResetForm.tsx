@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { API_ENDPOINT } from "../../config/constants";
 
 interface FormValues {
-  currentpasswd: string;
-  newpasswd: string;
+  current_password: string;
+  new_password: string;
 }
 
 const ResetForm: React.FC = () => {
@@ -40,9 +40,9 @@ const ResetForm: React.FC = () => {
       <div>
         <label className="block text-gray-700 font-semibold mb-2">Current Password:</label>
         <input
-          type="email"
-          id="email"
-          {...register("currentpasswd", { required: true })}
+          type="password"
+          id="current_password"
+          {...register("current_password", { required: true })}
           className="w-full border rounded-md py-2 px-3 bg-white text-gray-700 leading-tight focus:outline-none focus:border-blue-500 focus:shadow-outline-blue"
         />
       </div>
@@ -52,8 +52,8 @@ const ResetForm: React.FC = () => {
         </label>
         <input
           type="password"
-          id="password"
-          {...register("newpasswd", { required: true })}
+          id="new_password"
+          {...register("new_password", { required: true })}
           className="w-full border rounded-md py-2 px-3 bg-white text-gray-700 leading-tight focus:outline-none focus:border-blue-500 focus:shadow-outline-blue"
         />
       </div>

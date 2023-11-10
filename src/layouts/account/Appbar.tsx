@@ -51,11 +51,13 @@ const Appbar = () => {
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
                 <div className="flex-shrink-0">
+                  <Link key={"home"} to={`/dashboard`}>
                     <img
-                    className="h-20 w-86"
-                    src={Logo}
-                    alt="Smarter Tasks"
-                  />
+                      className="h-20 w-86"
+                      src={Logo}
+                      alt="Smarter Tasks"
+                    />
+                  </Link>
                 </div>
               </div>
               <div className="hidden md:block">
