@@ -127,20 +127,20 @@ const Appbar = () => {
                         {userNavigation.map((item) => (
                           <Menu.Item key={item.name}>
                             {({ active }) => (
+                              <Link
+                              key={item.name}
+                              to={item.href}
+                              className={
+                                'block text-sm text-gray-700 hover:text-gray-700'
+                              }
+                            >
                               <button className={classNames(
                                 active ? 'bg-gray-100' : '',
                                 'block px-4 py-2 text-sm text-gray-700 w-full bg-white'
                               )}>
-                                <Link
-                                  key={item.name}
-                                  to={item.href}
-                                  className={
-                                    'block text-sm text-gray-700 hover:text-gray-700'
-                                  }
-                                >
                                   {item.name}
-                                </Link>
                               </button>
+                              </Link>
                             )}
                           </Menu.Item>
                         ))}
